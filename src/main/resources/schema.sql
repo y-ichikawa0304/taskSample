@@ -4,3 +4,10 @@ create table if not exists tasklist (
     deadline varchar(10),
     done boolean
 );
+
+create table if not exists accounts (
+    id int not null auto_increment primary key,
+    accountID varchar(30),
+    password varchar(30),
+    email varchar(50)
+);
