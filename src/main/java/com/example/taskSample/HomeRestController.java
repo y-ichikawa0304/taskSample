@@ -1,4 +1,4 @@
-package com.example.taskSample.controller;
+package com.example.taskSample;
 
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,10 +14,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 public class HomeRestController {
-
+    // タスク1件だけを保持するための入れ物
     record TaskItem(String id, String task, String deadline, boolean done) {
     }
 
+    // すべてのタスクを格納するためのリスト
     private List<TaskItem> taskItems = new ArrayList<>();
 
     @RequestMapping(value = "/resthello")
